@@ -1,0 +1,12 @@
+﻿<Window 
+    x:Class="WeatherApp.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF" 
+    Title="{Binding Title}" Height="640" Width="480">
+    <Grid>
+        <m:Map 
+            x:Name="_map"            
+            CredentialsProvider="Aqt-nITLU2Iw172Mqp08Xk4-WYjv0mdlLMCgUqHDENNSNJbyXryjDOSKVCv5dPl5"/>
+    </Grid>
+</Window>
