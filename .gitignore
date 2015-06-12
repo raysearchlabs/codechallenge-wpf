@@ -107,4 +107,3 @@ UpgradeLog*.XML
 
 #NuGet
 *.nupkg
-[Ll]ib
