@@ -1,13 +1,13 @@
-﻿using WeatherApp.Services;
-
-namespace WeatherApp.Tests.Services
+﻿namespace WeatherApp.Tests.Services
 {
-  using Xunit;
+  using Microsoft.VisualStudio.TestTools.UnitTesting;
+  using WeatherApp.Services;
 
+  [TestClass]
   public class WeatherForecastServiceTests
   {
-    [Fact]
-    public void First_test()
+    [TestMethod]
+    public void Should_return_forecast_for_coords()
     {
       // Arrange
       var service = new WeatherForecastService();
@@ -18,7 +18,7 @@ namespace WeatherApp.Tests.Services
       var forecast = service.GetForecastByCoords(latitude, longitude);
 
       // Assert
-      Assert.NotNull(forecast);      
+      Assert.IsNotNull(forecast);      
     }
   }
 }

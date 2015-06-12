@@ -1,9 +1,10 @@
-﻿using Xunit;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace WeatherApp.Tests.ViewModels
 {
   using WeatherApp.ViewModels;
   
+  [TestClass]
   public class ViewModelTests
   {
     private class PersonViewModel : ViewModel
@@ -17,7 +18,7 @@ namespace WeatherApp.Tests.ViewModels
       }
     }
     
-    [Fact]
+    [TestMethod]
     public void Should_notify_property_changed_when_changing_property()
     {
       // Arrange
@@ -29,7 +30,7 @@ namespace WeatherApp.Tests.ViewModels
       vm.Name = "Uncle Bob";
 
       // Assert
-      Assert.True(propertyChanged);
+      Assert.IsTrue(propertyChanged);
     }
   }
 }

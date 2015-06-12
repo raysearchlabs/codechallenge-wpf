@@ -25,7 +25,7 @@
     public Forecast GetForecastByCoords(double latitude, double longitude)
     {
       var requestUri = string.Format(_numberFormatInfo, _requestUriFormat, latitude, longitude);
-      var json = _httpClient.GetStringAsync(requestUri).Result;
+      var json = _httpClient.GetStringAsync(@"http:// " + requestUri).Result;
       return JsonConvert.DeserializeObject<Forecast>(json);
     }
   }
